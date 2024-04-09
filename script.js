@@ -15,7 +15,6 @@
 
         // Set background images for body, banner, and sections
         body.style.backgroundImage = `url(images/${currentBg})`;
-        banner.style.backgroundImage = `url(images/banner-${currentBg})`;
     });
 
 /*     button.addEventListener('click', function() {
