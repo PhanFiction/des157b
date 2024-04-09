@@ -6,6 +6,8 @@
     const banner = document.querySelector('#banner');
     const bgList = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'];
     let index = 0;
+    
+    body.style.backgroundImage = `url(images/${bgList[0]})`;
 
     button.addEventListener('click', function() {
         // Toggle between different background images
