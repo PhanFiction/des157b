@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Tauri&family=Tilt+Neon&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+:root {
+  --blue-background: #C2E9F6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+  --poppins-font: "Poppins";
+  --neon-font: "Tilt Neon";
+  --reddit-font: "Reddit Mono";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +28,436 @@ body {
   box-sizing: border-box;
 }
 
-#myVideo {
-  display: block;
+#video-container {
+  position: relative;
+}
+
+#video {
   width: 100%;
-  max-width: 1366px;
-  margin: auto;
+  max-width: 100%;
+}
+
+#video:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.day {
+  filter: brightness(1) contrast(1) hue-rotate(-20deg);
+}
+
+.night {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+#boat {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  transform: scale(0.3) scaleX(-1);
+}
+
+#boat2 {
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  transform: scale(0.2) scaleX(-1);
+  z-index: 10;
+}
+
+#boat3 {
+  position: absolute;
+  top: 25%;
+  right: 40%;
+  transform: scale(0.25) scaleX(-1);
+}
+
+#boat4 {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  transform: scale(0.2) scaleX(-1);
+}
+
+#poem p {
+  position: absolute;
+  padding: 1em;
+  font-size: 2em;
+  transition: all 2.5s;
+  color: white;
+  font-family: var(--neon-font);
+  border-radius: 1rem;
+}
+
+.blue-bg {
+  background-color: var(--blue-color);
+}
+
+.indigo-bg {
+  background-color: var(--indigo-color);
+}
+
+#line1 {
+  bottom: 80%;
+  left: 50%;
+}
+
+#line2 {
+  bottom: 80%;
+  left: 50%;
+}
+
+#line3 {
+  bottom: 80%;
+  left: 50%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.showing {
+  opacity: 1;
+}
+
+.btn {
+  position: absolute;
+}
+
+.sun {
+  background-color: #ffee00;
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 50%;
+  position: absolute;
+  left: 13em;
+  top: 3rem;
+}
+
+.sun:before,
+.sun:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.sun:before {
+  height: 7.5em;
+  width: 7.5em;
+  right: -1.87em;
+  bottom: -1.87em;
+}
+.sun:after {
+  height: 12.5em;
+  width: 12.5em;
+  right: -4.37em;
+  bottom: -4.37em;
+}
+
+.ray1 {
+  height: 0;
+  width: 0.6em;
+  border-bottom: 10.6em solid rgba(255, 255, 255, 0.1);
+  border-left: 1.8em solid transparent;
+  border-right: 1.8em solid transparent;
+  position: absolute;
+  transform: rotate(130deg);
+  bottom: 0.6em;
+  right: 4em;
+}
+.ray2 {
+  position: absolute;
+  height: 0;
+  width: 0.9em;
+  border-bottom: 12.5em solid rgba(255, 255, 255, 0.1);
+  border-left: 2.1em solid transparent;
+  border-right: 2.1em solid transparent;
+  transform: rotate(230deg);
+  left: 3.75em;
+  bottom: -0.3em;
+}
+.ray3 {
+  position: absolute;
+  height: 0;
+  width: 0.3em;
+  border-bottom: 12.5em solid rgba(255, 255, 255, 0.1);
+  border-left: 0.9em solid transparent;
+  border-right: 0.9em solid transparent;
+  transform: rotate(80deg);
+  left: -5.3em;
+  bottom: -5.6em;
+}
+.ray4 {
+  position: absolute;
+  height: 0;
+  width: 0.1em;
+  border-bottom: 12.5em solid rgba(255, 255, 255, 0.1);
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  transform: rotate(280deg);
+  left: 7.5em;
+  bottom: -5.6em;
+}
+
+.moon {
+  height: 3.75em;
+  width: 3.75em;
+  box-shadow: 1.25em -1.25em 0 0 #f7f7de;
+  border-radius: 50%;
+  position: absolute;
+  left: 13em;
+  top: 3rem;
+  transform: rotate(210deg);
+}
+.moon:before,
+.moon:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.moon:before {
+  height: 6.25em;
+  width: 6.25em;
+  right: -2.5em;
+  bottom: 0;
+}
+.moon:after {
+  height: 11.8em;
+  width: 11.8em;
+  left: -2.8em;
+  bottom: -2.8em;
+}
+
+.glow {
+  height: 21.8em;
+  width: 21.8em;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -19em;
+  animation: float 5s infinite;
+}
+
+.stars {
+  height: 0.15em;
+  width: 0.15em;
+  background-color: #ffffff;
+  position: absolute;
+  top: 3.7em;
+  left: 9.3em;
+  border-radius: 50%;
+  box-shadow: 0em 3em white, 6em 5em white, 5em 4em white, 8em 5em white, 8em 4em white, 
+    15em 8em white, 25em 1em white, 25em 4em white, 30em 3em white,
+    35em 3em white, 45em 3em white, 35em 7em white, 50em 4em white, 50em 1em white,
+    60em 1em white;
+  opacity: 0.7;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  53% {
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(0.75em);
+  }
+}
+
+.glow:before,
+.glow:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+}
+.glow:before {
+  left: -9.3em;
+  top: -3.1em;
+}
+.glow:after {
+  right: -5.6em;
+  top: -0.8em;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 20px;
+  }
+}
+
+
+/*Toggle button*/
+#toggleContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.5);
+}
+
+#toggle {
+  transform: scale(0.5);
+}
+
+.toggle--checkbox {
+  display: none;
+}
+.toggle--checkbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+  /** Change the cloud to stars **/
+  /** Change the sun into the moon **/
+  /** Show the dimples on the moon **/
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 60px;
+  width: 5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  width: 5px;
+  height: 5px;
+  top: -25px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  width: 5px;
+  height: 5px;
+  left: -30px;
+  top: 20px;
+}
+.toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+.toggle--label {
+  /** Placeholder element, starting at blue **/
+  width: 200px;
+  height: 100px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+  /** The sun cloud and moon stars **/
+  /** Sun/Moon element **/
+  /** Gray dots on the moon **/
+}
+.toggle--label-background {
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  background: var(--white);
+  left: 135px;
+  top: 45px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -20px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -10px;
+  transition: all 150ms ease-in;
+}
+.toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: "";
+  width: 82px;
+  height: 82px;
+  border: 5px solid var(--yellow-border);
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 82px;
+  background: var(--yellow-background);
+}
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  left: 143px;
+  top: 23px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@keyframes switch {
+  0% {
+    left: 4px;
+  }
+  60% {
+    left: 4px;
+    width: 112px;
+  }
+  100% {
+    left: 104px;
+    width: 82px;
+  }
+}
+@keyframes reverse {
+  0% {
+    left: 104px;
+    width: 82px;
+  }
+  60% {
+    left: 72px;
+    width: 112px;
+  }
+  100% {
+    left: 4px;
+  }
 }

@@ -10,12 +10,41 @@
 </head>
 <body>
   <main>
-    <header>
-      <video controls autoplay muted playsinline id="myVideo">
-        <source src="/assets/video.webm" type="video/webm">
-        <source src="/assets/video.mp4" type="video/mp4">
+
+    <div id="video-container">
+      <video autoplay muted playsinline loop id="video">
+        <source src="assets/video.webm" type="video/webm">
+        <source src="assets/video.mp4" type="video/mp4">
+        <p>unsupported browser</p>
       </video>
-    </header>
+    </div>
+    
+    <div class="sun" id="sun">
+      <div class="ray1"></div>
+      <div class="ray2"></div>
+      <div class="ray3"></div>
+      <div class="ray4"></div>
+    </div>
+    <div class="moon" id="moon"></div>
+
+    <img src="assets/boat.png" alt="boat" id="boat">
+    <img src="assets/boat2.png" alt="boat" id="boat2">
+    <img src="assets/boat.png" alt="boat" id="boat3">
+    <img src="assets/boat2.png" alt="boat" id="boat4">
+    <div class="stars" id="stars"></div>
+
+    <section id="poem">
+      <p id="line1" class="hidden">Under the sky...</p>
+      <p id="line2" class="hidden">The boat sails away...</p>
+      <p id="line3" class="hidden">Into the ocean.</p>
+    </section>
+
+    <div id="toggleContainer">
+      <input type="checkbox" id="toggle" class="toggle--checkbox">
+      <label for="toggle" class="toggle--label">
+        <span class="toggle--label-background"></span>
+      </label>
+    </div>
   </main>
 </body>
 </html>
