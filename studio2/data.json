@@ -1,52 +1,56 @@
 [
   {
-    "time": "8:00AM",
-    "steps": "1,200",
-    "miles": "0.60"
+    "time": "9:00 AM",
+    "steps": "1000",
+    "miles": "0.44",
+    "id": 1
   },
   {
-    "time": "9:00AM",
-    "steps": "1,100",
-    "miles": "0.55"
-  },
-  {
-    "time": "10:00AM",
-    "steps": "1,150",
-    "miles": "0.50"
-  },
-  {
-    "time": "11:00AM",
-    "steps": "300",
-    "miles": "0.25"
-  },
-  {
-    "time": "12:00PM",
-    "steps": "50",
-    "miles": "0.02"
-  },
-  {
-    "time": "1:00PM",
-    "steps": "90",
-    "miles": "0.04"
-  },
-  {
-    "time": "2:00PM",
+    "time": "10:00 AM",
     "steps": "800",
-    "miles": "0.36"
+    "miles": "0.37",
+    "id": 2
   },
   {
-    "time": "3:00PM",
+    "time": "11:00 AM",
     "steps": "500",
-    "miles": "0.22"
+    "miles": "0.22",
+    "id": 3
   },
   {
-    "time": "4:00PM",
+    "time": "12:00 PM",
+    "steps": "50",
+    "miles": "0.02",
+    "id": 4
+  },
+  {
+    "time": "1:00 PM",
+    "steps": "90",
+    "miles": "0.04",
+    "id": 5
+  },
+  {
+    "time": "2:00 PM",
+    "steps": "800",
+    "miles": "0.36",
+    "id": 6
+  },
+  {
+    "time": "3:00 PM",
+    "steps": "500",
+    "miles": "0.22",
+    "id": 7
+  },
+  {
+    "time": "4:00 PM",
     "steps": "1,950",
-    "miles": "0.88"
+    "miles": "0.86",
+    "id": 8
   },
   {
-    "time": "5:00PM",
+    "time": "5:00 PM",
     "steps": "23",
-    "miles": "0.01"
+    "miles": "0.01",
+    "id": 9
   }
 ]
