@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Tauri&family=Tilt+Neon&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --poppins-font: "Poppins";
+  --neon-font: "Tilt Neon";
+  --reddit-font: "Reddit Mono";
+}
+
+header {
+  width: 100vw;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--poppins-font);
+  color: black;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+section {
+  height: 100vh;
+  display: block;
+  background-color: white;
+}
+
+footer {
+  height: 100px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--neon-font);
+}
