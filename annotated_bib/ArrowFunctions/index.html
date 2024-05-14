@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+  <script>
+  /*     
+    function makeUpperCase(aString) {
+      return aString.toUpperCase();
+    }
+
+    const makeUpperCase = function (aString) {
+      return aString.toUpperCase();
+    }
+
+    const makeUpperCase = aString => aString.toUpperCase();
+
+    const fullName = (fName, lName) => `${fName} ${lName}`; 
+    
+    console.log(makeUpperCase('cool aid'));
+
+    const fullName = () => {
+      const fName = 'Maria';
+      const lName = 'Sanchez';
+      return `${fName} ${lName}`;
+    }
+
+    const employee = function (fName, lName, jobTitle) {
+      this.fName = fName;
+      this.lName = lName;
+      this.position = jobTitle;
+      // this.fullName = function() { return `${fName} ${lName}`; }
+      
+      this.fullName = () => `${fName} ${lName}`;
+    }
+
+    const id234 = new employee('Bob', 'Smith', 'Mechanic');
+    console.log(id234.fullName());
+
+    const greeting = (fName, lName) => `Hello ${fName} ${lName}`;
+
+    console.log(greeting('John', 'Doe'));
+    */
+
+/*     const square = (x) => x * x;ß
+    console.log(square(4)); */
+
+/*     const largestNum = (num1, num2) => num1 > num2 ? num1: num2;
+    
+    console.log(largestNum(2,5)); */
+
+/*     const animals = ['llama', 'chicken', 'dog', 'cat'];
+    
+    animals.forEach(animal => {
+      const upperCase = animal.toUpperCase();
+      console.log(upperCase);
+    }); */
+
+    const scores = [5,10,15,20];
+    const totals = (accumulator, curValue) => accumulator + curValue;
+    console.log(scores.reduce(totals));
+
+  </script>
+</body>
+</html>
