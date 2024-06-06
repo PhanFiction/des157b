@@ -14,33 +14,37 @@
 <body>
   <main>
 
-    <section class="slides">
+    <div class="slides">
       
-      <ul class="list">
+      <div class="list">
 
-        <li class="slide" id="scene1">
+        <section class="slide" id="scene1">
           <img class="background" src="assets/bg1Gif.gif" alt="img"/>
 
-          <div class="content text" id="text1" data-aos="fade-left">Slide 1</div>
-          <div class="content text" id="text2" data-aos="fade-right">Slide 2</div>
-          <div class="content text" id="text3" data-aos="fade-up">Slide 3</div>
-          <div class="content text" id="text4" data-aos="fade-up">Slide 4</div>
+          <!-- <div class="content text" id="text1" data-aos="fade-left">Slide 1</div> -->
 
+          <div class="text-container">
+            
+            <div class="text-box">
+              <img class="text-frame" src="assets/dialogue_box.png" alt="dialogue_box">
+              <div class="content text" id="text1" data-aos="fade-left"><h3>This is John</h3></div>
 
-        </li>
+              <div class="content text" id="text2">
+                <p>John is an artist and a game developer.</p>
+                <p>He is currently attending school
+              </div>
+            </div>
 
-        <li class="slide" id="scene2">
+        </section>
+
+        <section class="slide" id="scene2">
           <img class="background" src="assets/bg2Gif.gif" alt="img"/>
           
-          <div class="content text" id="text1" data-aos="fade-left">Slide 1</div>
-          <div class="content text" id="text2" data-aos="fade-right">Slide 2</div>
-          <div class="content text" id="text3" data-aos="fade-up">Slide 3</div>
-          <div class="content text" id="text4" data-aos="fade-up">Slide 4</div>
-        </li>
+        </section>
 
-        <li class="slide" id="scene3">
+        <section class="slide" id="scene3">
           <img class="background" src="https://wallpapers.com/images/featured/fantasy-05e34f7bfyhne5vg.jpg" alt="img"/>
-        </li>
+        </section>
 
 <!--         <li class="slide" id="slide2">
           <div class="background" style="background-image: url('https://i.pinimg.com/originals/19/8e/6b/198e6bf09f6b836a82d9b631efe56c11.jpg');"></div>
@@ -79,7 +83,7 @@
 
       </ul>
       
-    </section>
+    </div>
 
     <div class="scrollElement"></div>
 

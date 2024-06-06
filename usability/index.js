@@ -47,6 +47,37 @@
   });
 
   gsap.from('#text1', {
+    x: 0,
+    y: -150,
+  })
+
+  gsap.from('#text2', {
+    x: 0,
+    y: 0,
+  })
+
+  text.to("#text1", { 
+    x: 0,
+    y: 150,
+  }, 0.5)
+
+  text.to("#text2", { 
+    x: 0,
+    y: 0,
+  }, 0.5)
+
+  let scene1 = gsap.timeline();
+  ScrollTrigger.create({
+    animation: scene1,
+    trigger: "#scene1",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    pinSpacing: true,
+  });
+
+/*   gsap.from('#text1', {
     x: -350,
     y: 0,
   })
@@ -84,7 +115,7 @@
   text.to("#text4", { 
     x: -100,
     y: 50,
-  }, 0.5)
+  }, 0.5) */
 
   ScrollTrigger.create({
     animation: text,
@@ -93,17 +124,6 @@
     end: "bottom center",
     scrub: true,
     markers: false,
-  });
-
-  let scene1 = gsap.timeline();
-  ScrollTrigger.create({
-    animation: scene1,
-    trigger: "#scene1",
-    start: "top top",
-    end: "+=1000",
-    scrub: true,
-    pin: true,
-    pinSpacing: true,
   });
 
   let scene2 = gsap.timeline();

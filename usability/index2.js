@@ -36,8 +36,6 @@
         }, 0);
   }) */
 
-  const SPEED = 2;
-
   // Scene 1
   let scene1 = gsap.timeline();
   ScrollTrigger.create({
@@ -54,51 +52,56 @@
   let sceneTwoText = gsap.timeline();
   ScrollTrigger.create({
     animation: sceneTwoText,
-    trigger: "#scene2",
+    trigger: "#text-box2",
     start: "top",
     end: "bottom center",
-    scrub: 1,
+    scrub: false,
+    markers: false,
   });
 
-  sceneTwoText.fromTo('#text1',
+
+  sceneTwoText.fromTo('#text1', 
     {
-      ease: Power1.easeInOut,
-      delay: 3,
-      duration: 10,
-      y: -50 * SPEED,
-      duration: 10,
       opacity: 0,
+      duration: 3,
+      delay: 2,
     },
     {
-      y: -20, 
-      duration: 10,
       opacity: 1,
+      duration: 3,
     }
-  )
+  ).set('#text1', {
+    duration: 3,
+  })
+
+/*   sceneTwoText.from('#text1', {
+    opacity: 0,
+    duration: 3,
+  })
+
+  sceneTwoText.to('#text1', {
+    opacity: 1,
+    duration: 3,
+  })
+   */
   
   sceneTwoText.fromTo('#text2', 
-    {
-      opacity: 0,
-      ease: Power1.easeInOut,
-      delay: 3,
-      duration: 10,
-      y: -50 * SPEED,
-    },
-    {
-      opacity: 1,
-      ease: Power1.easeInOut,
-      delay: 3,
-      duration: 10,
-      y: 70,
-    }
-  )
+  {
+    opacity: 0,
+    duration: 3,
+    delay: 3,
+  },
+  {
+    opacity: 1,
+    duration: 9,
+  })
 
   let scene2 = gsap.timeline();
   ScrollTrigger.create({
     animation: scene2,
     trigger: "#scene2",
     start: "top",
-    end: "+=1100",
+    end: "+=700",
     scrub: true,
     pin: true,
     pinSpacing: true,
@@ -118,62 +121,50 @@
   let sceneThreeText = gsap.timeline();
   ScrollTrigger.create({
     animation: sceneThreeText,
-    trigger: "#scene3",
+    trigger: ".text-container-left",
     start: "top",
     end: "bottom center",
-    scrub: 1,
+    scrub: false,
+    markers: false,
+    toggleActions: 'play onLeave onEnterBack onLeaveBack',
   });
 
   sceneThreeText.fromTo('#text3', 
     {
-      delay: 3,
-      x: 0,
-      opacity: 1,
-      duration: 10,
+      opacity: 0,
+      duration: 3,
+      delay: 1,
     },
     {
-      ease: Power1.easeInOut,
-      delay: 3,
-      x: -100,
-      opacity: 0,
-      duration: 10,
+      opacity: 1,
+      duration: 3,
     }
-  )
+  ).set('#text3', {
+    display: 'none',
+    duration: 3,
+  })
 
   sceneThreeText.fromTo('#text4', 
     {
-      x: 100,
       opacity: 0,
-      duration: 10,
-      ease: Power1.easeInOut,
+      duration: 5,
+      delay: 5,
+      display: 'none',
     },
     {
-      x: 0,
       opacity: 1,
-      duration: 10,
-      delay: 0.01,
+      duration: 3,
+      display: 'block'
     }
-  )
-
-  sceneThreeText.fromTo('#bubble-3', 
-    {
-      opacity: 0,
-      duration: 10,
-      ease: Power1.easeInOut,
-    },
-    {
-      opacity: 1,
-      duration: 10,
-    },
   )
 
   let scene3 = gsap.timeline();
   ScrollTrigger.create({
     animation: scene3,
     trigger: "#scene3",
-    start: "top",
-    end: "+=1000",
-    scrub: 5,
+    start: "top top",
+    end: "+=700",
+    scrub: true,
     pin: true,
     pinSpacing: true,
   });
@@ -182,7 +173,7 @@
     animation: sceneThreeText,
     trigger: "#scene3",
     start: "top",
-    end: "bottom",
+    end: "bottom center",
     scrub: true,
     markers: false,
   });
@@ -192,61 +183,50 @@
   let sceneFourText = gsap.timeline();
   ScrollTrigger.create({
     animation: sceneFourText,
-    trigger: "#scene4",
+    trigger: ".text-box",
     start: "top",
     end: "bottom center",
-    scrub: 1,
+    scrub: false,
+    markers: false,
+    toggleActions: 'play onLeave onEnterBack onLeaveBack',
   });
-
-  sceneFourText.fromTo('#bubble-4', 
-    {
-      delay: 3,
-      opacity: 0,
-      duration: 5,
-    },
-    {
-      ease: Power1.easeInOut,
-      opacity: 1,
-      duration: 5,
-    }
-  )
 
   sceneFourText.fromTo('#text5', 
     {
-      delay: 3,
-      x: 0,
-      opacity: 1,
-      duration: 5,
+      opacity: 0,
+      duration: 3,
+      delay: 0.5,
     },
     {
-      ease: Power1.easeInOut,
-      delay: 3,
-      x: -100,
-      opacity: 0,
-      duration: 5,
+      opacity: 1,
+      duration: 3,
     }
-  ).fromTo('#photo6', 
+  ).set('#text5', {
+    duration: 3,
+  });
+
+  sceneFourText.fromTo('#text6', 
     {
+      opacity: 0,
+      duration: 3,
+      delay: 3,
+      display: 'none',
+    },
+    {
+      opacity: 1,
       x: 100,
-      opacity: 0,
-      duration: 5,
-      ease: Power1.easeInOut,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 5,
-      delay: 0.01,
+      duration: 3,
+      display: 'block'
     }
-  )
+  );
 
   let scene4 = gsap.timeline();
   ScrollTrigger.create({
     animation: scene4,
     trigger: "#scene4",
-    start: "top",
+    start: "top top",
     end: "+=700",
-    scrub: 3,
+    scrub: true,
     pin: true,
     pinSpacing: true,
   });
@@ -259,53 +239,6 @@
     scrub: true,
     markers: false,
   });
-
-
-  // Scene 5
-  let sceneFiveText = gsap.timeline();
-  ScrollTrigger.create({
-    animation: sceneFiveText,
-    trigger: "#scene5",
-    start: "top",
-    end: "bottom center",
-    scrub: 1,
-  });
-
-sceneFiveText.fromTo('#text6', 
-  {
-    opacity: 0,
-    duration: 3,
-    delay: 3,
-    x: -1000,
-  },
-  {
-    opacity: 1,
-    x: 10,
-    duration: 3,
-  }
-)
-
-let scene5 = gsap.timeline();
-ScrollTrigger.create({
-  animation: scene5,
-  trigger: "#scene5",
-  start: "top",
-  end: "+=1000",
-  scrub: true,
-  pin: true,
-  pinSpacing: true,
-});
-
-ScrollTrigger.create({
-  animation: sceneFiveText,
-  trigger: "#scene5",
-  start: "top",
-  end: "bottom center",
-  scrub: true,
-  markers: false,
-});
-
-
 
   const lenis = new Lenis();
 
