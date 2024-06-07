@@ -4,38 +4,6 @@
   AOS.init();
   gsap.registerPlugin(ScrollTrigger);
 
-/*   let container = document.querySelector(".slides"),
-      slides = gsap.utils.toArray(".slide"),
-      getRatio = (el) => window.innerHeight / (window.innerHeight + el.offsetHeight);
-
-  slides.forEach((slide, i) => {
-    let bg = slide.querySelector(".background"),
-      content = slide.querySelector(".content"),
-      tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: slide,
-          start: () => i ? "top bottom" : "top top",
-          end: "bottom top",
-          scrub: true,
-          invalidateOnRefresh: true,
-          duration: 4500,
-        }
-      });
-
-      tl.fromTo(bg, {
-          y: () => i ? -window.innerHeight * getRatio(slide) : 0
-        }, {
-          y: () => window.innerHeight * (1 - getRatio(slide)),
-          ease: "none"
-        });
-      tl.fromTo(content, {
-          y: () => i ? window.innerHeight * -getRatio(slide) * 2 : 0
-        }, {
-          y: () => window.innerHeight * getRatio(slide) * 2,
-          ease: "none"
-        }, 0);
-  }) */
-
   const SPEED = 2;
 
   // Scene 1
@@ -271,40 +239,236 @@
     scrub: 1,
   });
 
-sceneFiveText.fromTo('#text6', 
-  {
-    opacity: 0,
-    duration: 3,
-    delay: 3,
-    x: -1000,
-  },
-  {
-    opacity: 1,
-    x: 10,
-    duration: 3,
-  }
-)
+  sceneFiveText.fromTo('#bubble-5', 
+    {
+      delay: 3,
+      opacity: 0,
+      duration: 5,
+    },
+    {
+      ease: Power1.easeInOut,
+      opacity: 1,
+      duration: 5,
+    }
+  ).fromTo('#text6', 
+    {
+      opacity: 0,
+      x: -200,
+    },
+    {
+      opacity: 1,
+      x: -35,
+      duration: 10,
+      ease: Power1.easeInOut,
+    }
+  ).fromTo('#text7', 
+    {
+      opacity: 0,
+      x: -35,
+    },
+    {
+      y: 100,
+      x: -60,
+      delay: 10,
+      opacity: 1,
+      duration: 10,
+      ease: Power1.easeInOut,
+    }
+  )
 
-let scene5 = gsap.timeline();
-ScrollTrigger.create({
-  animation: scene5,
-  trigger: "#scene5",
-  start: "top",
-  end: "+=1000",
-  scrub: true,
-  pin: true,
-  pinSpacing: true,
-});
+  let scene5 = gsap.timeline();
+  ScrollTrigger.create({
+    animation: scene5,
+    trigger: "#scene5",
+    start: "top",
+    end: "+=700",
+    scrub: 3,
+    pin: true,
+    pinSpacing: true,
+  });
 
-ScrollTrigger.create({
-  animation: sceneFiveText,
-  trigger: "#scene5",
-  start: "top",
-  end: "bottom center",
-  scrub: true,
-  markers: false,
-});
+  ScrollTrigger.create({
+    animation: sceneFiveText,
+    trigger: "#scene5",
+    start: "top",
+    end: "bottom",
+    scrub: true,
+    markers: false,
+  });
 
+
+  // Scene 6
+  let sceneSixText = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sceneSixText,
+    trigger: "#scene6",
+    start: "top",
+    end: "bottom",
+    scrub: 5,
+  });
+
+  let sceneSixDialogue = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sceneSixDialogue,
+    trigger: "#scene6",
+    start: "top",
+    end: "bottom",
+    scrub: 5,
+  });
+
+  sceneSixDialogue.fromTo('#text8',
+    {
+      x: -40,
+      y: -10,
+      opacity: 0,
+      duration: 6000 * 5,
+    },
+    {
+      x: 250,
+      opacity: 1,
+      duration: 6000 * 5,
+      ease: Power1.easeInOut,
+    }
+  ).fromTo('#text9', 
+    {
+      x: 1500,
+      y: 50,
+      opacity: 0,
+      duration: 6000 * 5,
+    },
+    {
+      x: 1290,
+      opacity: 1,
+      duration: 6000 * 5,
+      ease: Power1.easeInOut,
+    }
+  )
+
+  sceneSixDialogue.fromTo('#asset1', 
+    {
+      opacity: 0,
+      duration: 6000 * 5,
+    },
+    {
+      opacity: 1,
+      duration: 6000 * 5,
+      ease: Power1.easeInOut,
+    }
+  ).set('#asset1', {
+    display: 'none',
+    duration: 6000 * 5,
+    ease: Power1.easeInOut,
+  }).fromTo('#asset2', 
+    {
+      opacity: 0,
+      duration: 6000 * 5,
+    },
+    {
+      opacity: 1,
+      duration: 6000 * 5,
+      ease: Power1.easeInOut,
+    }
+  ).set('#asset2', {
+    display: 'none',
+    duration: 6000 * 5,
+    ease: Power1.easeInOut,
+  }).fromTo('#asset3', 
+    {
+      opacity: 0,
+      duration: 6000 * 5,
+    },
+    {
+      opacity: 1,
+      duration: 6000 * 5,
+      ease: Power1.easeInOut,
+    }
+  )
+
+  let scene6 = gsap.timeline();
+  ScrollTrigger.create({
+    animation: scene6,
+    trigger: "#scene6",
+    start: "top",
+    end: "+=2000",
+    scrub: 10,
+    pin: true,
+    pinSpacing: true,
+  });
+
+  ScrollTrigger.create({
+    animation: sceneSixDialogue,
+    trigger: "#scene6",
+    start: "top",
+    end: "bottom",
+    scrub: true,
+    markers: false,
+  })
+
+  ScrollTrigger.create({
+    animation: sceneSixText,
+    trigger: "#scene6",
+    start: "top",
+    end: "bottom",
+    scrub: true,
+    markers: false,
+  });
+
+
+  // Scene 7
+  let sceneSevenText = gsap.timeline();
+  ScrollTrigger.create({
+    animation: sceneSevenText,
+    trigger: "#scene7",
+    start: "top",
+    end: "bottom center",
+    scrub: 1,
+  });
+
+  sceneSevenText.fromTo('#text10', 
+    {
+      opacity: 0,
+      x: -200,
+    },
+    {
+      opacity: 1,
+      x: -35,
+      duration: 10,
+      ease: Power1.easeInOut,
+    }
+  ).fromTo('#text11', 
+    {
+      opacity: 0,
+      x: -35,
+    },
+    {
+      delay: 10,
+      opacity: 1,
+      y: 100,
+      x: -60,
+      duration: 10,
+      ease: Power1.easeInOut,
+    }
+  );
+
+  let scene7 = gsap.timeline();
+  ScrollTrigger.create({
+    animation: scene7,
+    trigger: "#scene7",
+    start: "top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    pinSpacing: true,
+  });
+
+  ScrollTrigger.create({
+    animation: sceneSevenText,
+    trigger: "#scene7",
+    start: "top",
+    end: "bottom center",
+    scrub: true,
+    markers: false,
+  });
 
 
   const lenis = new Lenis();

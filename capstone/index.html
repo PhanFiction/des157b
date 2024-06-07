@@ -37,8 +37,8 @@
             >
             <div class="profile">
               <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-left">
-              <span class="bubble-text center">
-                Hello
+              <span class="bubble-text text-center">
+                Hello there.
               </span>
               <img class="profile-pic" src="assets/person.png" alt="person">
             </div>
@@ -64,8 +64,7 @@
 
         <!-- Section 3 -->
         <section class="slide" id="scene3">
-          <img class="background" src="assets/bg1Gif.gif" alt="img"/>
-
+          <img class="background" src="assets/bg8.gif" alt="img"/>
 
           <div class="text-container-left">
             <div class="text-box">
@@ -99,8 +98,8 @@
             >
             <div class="profile">
               <div id="bubble-3">
-                <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-left">
-                <span class="bubble-text center">
+                <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-right">
+                <span class="bubble-text text-center-inverted">
                   He left?
                 </span>
               </div>
@@ -112,18 +111,13 @@
         
         <!-- Section 4 -->
         <section class="slide" id="scene4">
-          <img class="background" src="assets/bg1Gif.gif" alt="img"/>
+          <img class="background" src="assets/bg7.gif" alt="img"/>
 
           <div class="profile-container-left">
-            <img 
-              class="profile-frame"
-              src="assets/profile_frame.png" 
-              alt="frame"
-            >
             <div class="profile">
               <div id="bubble-4">
                 <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-left">
-                <span class="bubble-text center">
+                <span class="bubble-text text-center">
                   Whats this?
                 </span>
               </div>
@@ -152,56 +146,90 @@
           <img class="background" src="assets/bg3.gif" alt="img"/>
             
           <div class="text-container-left">
-            <div class="text-box">
-              <div class="content text" id="text6">
-                <p id="text6">
-                  John starts to create his own assets using stable diffusion tools that he downloaded from github. 
+
+            <div class="text-box2" id="text6">
+              <img class="text-frame2" src="assets/dialogue_box2.png" alt="dialogue_box">
+              <div class="content2 highlight">
+                <p>
+                  John starts to create his own assets using stable diffusion tools.
                 </p>
               </div>
             </div>
+
+            <div class="text-box2" id="text7">
+              <img class="text-frame2" src="assets/dialogue_box2.png" alt="dialogue_box">
+              <div class="content2 highlight">
+                <p id="box7">
+                  The final results he gets back is amazing.
+                </p>
+              </div>
+            </div>
+
           </div>
+
 
           <div class="profile2">
             <div id="bubble-5">
               <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-right">
-              <span class="bubble-text left">
+              <span class="bubble-text" id="bubble-text-5">
                 Now we wait.
               </span>
             </div>
             <img class="profile-pic2" src="assets/person5.png" alt="person">
           </div>
         </section>
+
 
         <!--Section 6-->
         <section class="slide" id="scene6">
-          <img class="background" src="assets/bg3.gif" alt="img"/>
-            
-          <div class="text-container-left">
-            <div class="text-box">
-              <div class="content text" id="text6">
+          <img class="background" src="assets/bg6.gif" alt="img"/>
+
+          <div class="text-container-left" id="dialogue6">
+
+            <div class="text-box2" id="text8">
+              <img class="text-frame2" src="assets/dialogue_box2.png" alt="dialogue_box">
+              <div class="content2 highlight">
                 <p>
-                  After looking at the data and seeing the potential of what stable diffusion can do. John started to create his own assets for the game.
+                  After looking at the generated images. John decided that the art was good.
                 </p>
               </div>
             </div>
+
+            <div class="text-box2" id="text9">
+              <img class="text-frame2" src="assets/dialogue_box2.png" alt="dialogue_box">
+              <div class="content2 highlight">
+                <p>
+                  He thinks its time to build the game with the new generated images.
+                </p>
+              </div>
+            </div>
+            
           </div>
 
-          <div class="profile2">
-            <div id="bubble-5">
-              <img src="assets/bubble_box.png" alt="text-bubble" class="bubble-box flip-right">
-              <span class="bubble-text left">
-                Now we wait.
-              </span>
-            </div>
-            <img class="profile-pic2" src="assets/person5.png" alt="person">
+          <div class="asset-container" id="assets">
+            <img src="assets/assets1.jpg" alt="asset1" class="asset" id="asset1">
+            <img src="assets/assets2.jpg" alt="asset2" class="asset" id="asset2">
+            <img src="assets/assets3.jpg" alt="asset3" class="asset" id="asset3">
           </div>
         </section>
 
-      </div>
-      
-    </div>
 
-    <div class="scrollElement"></div>
+      <!--Section 7 End Content-->
+      <section class="slide" id="scene7">
+        <img class="background" src="assets/bg5.gif" alt="img"/>
+        
+        <h3 id="final">The End</h3>
+        
+        <div class="hud">
+          <img src="assets/health.png" alt="health" class="health">
+          <img src="assets/backpack.png" alt="backpack" class="backpack">
+        </div>
+      
+      </section>
+
+
+      </div>
+    </div>
 
     <script src="index.js" defer></script>
   </main>

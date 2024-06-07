@@ -133,12 +133,12 @@ p {
 
 .profile {
   position: absolute;
+  top: -100%;
   width: 300px;
   height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -10px;
   z-index: 2;
 }
 
@@ -162,11 +162,14 @@ p {
   transform: scale(80%);
 }
 
-.bubble-box {
+.bubble-box, .bubble-box2 {
   position: absolute;
   width: 100%;
   top: -20%;
   bottom: 0;
+}
+
+.bubble-box {
   filter: brightness(0) invert(1);
 }
 
@@ -193,6 +196,11 @@ p {
   z-index: 1;
 }
 
+.text-frame2 {
+  transform: scale(200%);
+  z-index: 1;
+}
+
 .text-box {
   width: 450px;
   height: 200px;
@@ -202,13 +210,27 @@ p {
   word-wrap: break-word;
 }
 
-.content {
-  overflow: hidden;
+.text-box2 {
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content, .content2 {
   position: absolute;
-  left: -10%;
+  overflow: hidden;
   padding: 1rem;
   z-index: 1;
-  transform: translate(0);
+}
+
+.content {
+  left: -10%;
+}
+
+.content2 {
+  width: 300px;
+  top: -5%;
+  left: -10%;
 }
 
 .content h3 {
@@ -216,29 +238,35 @@ p {
   margin: 1rem 0 1rem 0;
 }
 
-.content p {
+.content p, .content2 p {
   font-size: 1.5rem;
   line-height: 1.25em;
-  z-index: 1;
 }
 
 .bubble-text {
+  color: black;
   position: absolute;
   top: -10%;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 2.75rem;
   z-index: 1;
-  color: black;
 }
 
-.center {
+.text-center {
   left: 90%;
-  width: 100%;
 }
 
-.left {
-  right: 0;
-  left: -65%;
+.text-center-inverted {
+  left: -45%;
+}
+
+/* .center {
+  left: 100%;
   width: 100%;
+} */
+
+#bubble-text-5 {
+  left: -64%;
 }
 
 .data-photo {
@@ -246,13 +274,57 @@ p {
   top: 0px;
   left: -80%;
   transform: scale(120%);
+  border-radius: 2rem;
   z-index: 1;
 }
 
-.scrollElement {
-  position: absolute;
-  height: 1000px;
-  width: 100px;
+.highlight {
+  text-shadow: -1px 2px 5px rgb(68, 255, 0);
+}
+
+.hud {
+  position: relative;
+  bottom: -40%;
+  left: -50%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.health {
+  transform: scale(100%);
+  margin-left: 2rem;
+}
+
+.backpack {
+  position: relative;
+  top: 10px;
+  transform: scale(100%);
+}
+
+.asset-container {
+  position: relative;
+  top: -9.5%;
+  left: -7.5%;
+  border-radius: 16px;
+  z-index: 1;
+  width: 910px;
+  height: 250px;
+  background-color: black;
+  transform: scale(50%, 100%);
+}
+
+.asset {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+#final {
+  position: relative;
   top: 0;
-  z-index: 0;
+  left: 10%;
+  font-size: 5rem;
+  text-shadow: 2px 2px 5px red;
+  z-index: 1,
 }
