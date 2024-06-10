@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Tilt+Neon&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+:root {
+  --exos-font: "Exo 2", sans-serif;
+  --truculenta-font: "Truculenta", sans-serif;
+  --tilt-neon-font: "Tilt Neon", sans-serif;
+  --reddit-font: "Reddit Mono", monospace;
+  --poppins-font: "Poppins", sans-serif;
+}
+
 * {
-  box-sizing: none;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: white;
@@ -22,6 +32,7 @@ main {
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
+  font-family: var(--exos-font);
 }
 
 h1 {
@@ -39,6 +50,11 @@ p {
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
+  font-family: var(--tilt-neon-font);
+}
+
+span {
+  font-family: var(--truculenta-font);
 }
 
 .slides {
@@ -85,7 +101,7 @@ p {
 
 /*Containers*/
 .text {
-  display: absolute;
+  position: absolute;
   left: 0;
 }
 
@@ -124,7 +140,7 @@ p {
 }
 
 .profile-frame {
-  transform: scale(150%);
+  transform: scale(1.5);
   position: absolute;
   top: 0;
   left: 0;
@@ -155,11 +171,11 @@ p {
 }
 
 .profile-pic {
-  transform: scale(60%);
+  transform: scale(0.6);
 }
 
 .profile-pic2 {
-  transform: scale(80%);
+  transform: scale(0.8);
 }
 
 .bubble-box, .bubble-box2 {
@@ -183,21 +199,13 @@ p {
   right: 70%;
 }
 
-/* .text-container {
-  position: relative;
-  top: 0%;
-  left: 70%;
-  z-index: 2;
-}
- */
-
 .text-frame {
-  transform: scale(150%);
+  transform: scale(1.5);
   z-index: 1;
 }
 
 .text-frame2 {
-  transform: scale(200%);
+  transform: scale(2);
   z-index: 1;
 }
 
@@ -224,7 +232,7 @@ p {
 }
 
 .content {
-  left: -10%;
+  left: -15%;
 }
 
 .content2 {
@@ -260,11 +268,6 @@ p {
   left: -45%;
 }
 
-/* .center {
-  left: 100%;
-  width: 100%;
-} */
-
 #bubble-text-5 {
   left: -64%;
 }
@@ -273,7 +276,7 @@ p {
   position: relative;
   top: 0px;
   left: -80%;
-  transform: scale(120%);
+  transform: scale(1.2);
   border-radius: 2rem;
   z-index: 1;
 }
@@ -292,14 +295,14 @@ p {
 }
 
 .health {
-  transform: scale(100%);
+  transform: scale(1);
   margin-left: 2rem;
 }
 
 .backpack {
   position: relative;
   top: 10px;
-  transform: scale(100%);
+  transform: scale(1);
 }
 
 .asset-container {
@@ -311,7 +314,7 @@ p {
   width: 910px;
   height: 250px;
   background-color: black;
-  transform: scale(50%, 100%);
+  transform: scale(0.5, 1);
 }
 
 .asset {
@@ -326,5 +329,4 @@ p {
   left: 10%;
   font-size: 5rem;
   text-shadow: 2px 2px 5px red;
-  z-index: 1,
 }
